@@ -7,6 +7,7 @@ import FlipCard from './components/FlipCard';
 
 import PokeApi from './api/PokeApi';
 
+import './App.css';
 
 const App = () => {
 
@@ -73,8 +74,7 @@ const App = () => {
     return (
         <div className="bg-blue-700 h-screen w-screen shadow-inner">
             <div className="container text-center m-auto p-2 max-w-xl pb-8">
-                <h1 className="text-6xl m-auto inline-block"
-                    style={{ fontFamily: "Pokemon", color: '#ffcc03' }}>Poke Flip</h1>
+                <h1 className="text-6xl m-auto inline-block siteHeader">Poke Flip</h1>
 
                 <CardsContainer>
                     { items && items.map( (card, index) => {
