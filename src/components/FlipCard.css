@@ -1,0 +1,36 @@
+.flipCard {
+    perspective: 1000px;
+    height: calc(100vh / 6)
+}
+
+@media screen and (max-width: 480px) {
+    .flipCard {
+        perspective: 1000px;
+        height: calc(100vh / 7)
+    }
+}
+
+.flipCard:hover {
+    cursor: pointer;
+}
+
+.flipCard__inner {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.flipCard__inner--rotate {
+    transform: rotateY(180deg);
+}
+
+.flipCard__side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flipCard__side--front {
+}
+
+.flipCard__side--back {
+    transform: rotateY(180deg);
+}
